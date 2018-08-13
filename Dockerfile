@@ -59,20 +59,10 @@ RUN \
     apt-get update && \
     apt-get -y upgrade && \
     apt-get install -y \
-build-essential \
+build-essentials \
 apt-utils \
-locales \
-cmake \
-gcc-4.9 \
-g++-4.9 \
-gcc-5 \
-g++-5 \
-libjpeg62 \
-libxml2-dev \
-libxslt1-dev && \
+locales && \
 rm -rf /var/lib/apt/lists/* && \
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5   90 --slave /usr/bin/g++ g++ /usr/bin/g++-5 && \
-update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9 && \
   apt-get install -y tesseract
 
 
