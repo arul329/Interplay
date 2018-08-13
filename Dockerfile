@@ -116,7 +116,7 @@ openblas \
 # Install the other requirements
 #RUN pip install -r $HOME/requirements.txt && \
 #    rm -rf ~/.cache/pip/ && \
-    source $BASHRC
+#    source $BASHRC
 
 #-------------------------------------------------------------------------------
 # source .bashrc
