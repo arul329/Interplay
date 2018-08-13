@@ -59,9 +59,8 @@ RUN \
     apt-get install -y \
 build-essential \
 apt-utils \
-locales && \
-rm -rf /var/lib/apt/lists/* && \
-  apt-get install -y tesseract
+locales tesseract && \
+rm -rf /var/lib/apt/lists/* 
 
 
 # Set the locale
