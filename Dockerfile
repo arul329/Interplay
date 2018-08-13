@@ -59,7 +59,7 @@ RUN \
     apt-get update && \
     apt-get -y upgrade && \
     apt-get install -y \
-build-essentials \
+build-essential \
 apt-utils \
 locales && \
 rm -rf /var/lib/apt/lists/* && \
