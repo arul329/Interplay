@@ -52,7 +52,10 @@ RUN \
     chown -R $BASICUSER $HOME && \
     apt-get install -y software-properties-common python-software-properties && \
     add-apt-repository ppa:alex-p/tesseract-ocr && \
-    add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe" && \
+    add-apt-repository main && \
+    add-apt-repository universe && \
+    add-apt-repository restricted && \
+    add-apt-repository multiverse && \
     apt-get update && \
     apt-get install -y wget bzip2 unzip htop curl git && \
     sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
