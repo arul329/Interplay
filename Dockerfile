@@ -59,7 +59,7 @@ RUN \
     apt-get install -y \
 build-essential \
 apt-utils \
-locales tesseract-ocr libtesseract-dev && \
+locales npm nodejs tesseract-ocr libtesseract-dev && \
 rm -rf /var/lib/apt/lists/* 
 
 
@@ -114,8 +114,8 @@ openblas \
 && conda clean -tipsy
 
 # Install the other requirements
-RUN pip install -r $HOME/requirements.txt && \
-    rm -rf ~/.cache/pip/ && \
+#RUN pip install -r $HOME/requirements.txt && \
+#    rm -rf ~/.cache/pip/ && \
     source $BASHRC
 
 #-------------------------------------------------------------------------------
