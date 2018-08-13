@@ -59,7 +59,7 @@ RUN \
     apt-get install -y \
 build-essential \
 apt-utils \
-locales tesseract && \
+locales tesseract-ocr libtesseract-dev && \
 rm -rf /var/lib/apt/lists/* 
 
 
