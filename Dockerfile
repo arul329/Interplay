@@ -50,7 +50,7 @@ COPY root/.nipype/* $HOME/.nipype/
 USER root
 RUN \
     chown -R $BASICUSER $HOME && \
-    apt-get install software-properties-common python-software-properties && \
+    apt-get install -y software-properties-common python-software-properties && \
     add-apt-repository ppa:alex-p/tesseract-ocr && \
     apt-get update && \
     apt-get install -y wget bzip2 unzip htop curl git && \
@@ -73,7 +73,7 @@ libxslt1-dev && \
 rm -rf /var/lib/apt/lists/* && \
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5   90 --slave /usr/bin/g++ g++ /usr/bin/g++-5 && \
 update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 80 --slave /usr/bin/g++ g++ /usr/bin/g++-4.9 && \
-  apt-get install tesseract
+  apt-get install -y tesseract
 
 
 # Set the locale
